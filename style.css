@@ -1,0 +1,712 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: whitesmoke;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.sidenav {
+    background: black;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.logo{
+    margin-top: 30px;
+}
+.sidenav label{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sidenav label span{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+.profile {
+    padding-top: 30px;
+    color: whitesmoke;
+}
+.profile img{
+    border-radius: 50%;
+    border: 5px solid grey;
+}
+.profile p{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.work{
+    font-size: 18px;
+    color: whitesmoke;
+    padding-top: 20px;
+}
+.socials{
+    position: absolute;
+    bottom: 9%;
+    width: 100%;
+}
+.socials a i{
+    color: red;
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    padding: 50px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.footer p{
+    color: whitesmoke;
+}
+main{
+    margin-left: 25%;
+}
+main nav{
+    background: black;
+    height: 80px;
+    top: 0;
+    position: sticky;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 80px;
+}
+nav li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+nav li a:hover , .active{
+    background: red;
+    transition: .5s;
+}
+.dp{
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    display: none;
+}
+.dp img{
+    border-radius: 50%;
+    margin-top: 9px;
+    border: 2px solid grey;
+}
+.checkbtn{
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.checkbtn img{
+    margin-top: 15px;
+}
+.Home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homecontent{
+    text-align: center;
+    height: 100px;
+}
+.homecontent p{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}
+.homecontent p span{
+    padding: 7px 10px;
+    border-radius: 10px;
+    color: red;
+}
+.about{
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.about h3{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+.about p{
+    text-align: justify;
+    text-indent: 120px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.about h2{
+    color: red;
+    padding: 15px;
+    font-size: 25px;
+}
+.details{
+    display: flex;
+    margin-top: 20px;
+    gap: 60px;
+}
+.about .details .left li , .about .details .right li{
+    padding: 10px;
+    margin-left: 40px;
+}
+.about .details .left strong , .about .details .right strong{
+    color: red;
+    font-size: 20px;
+}
+.details .left i , .details .right i{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.about .details .left li span , .about .details .right li span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.education h3{
+    font-size: 20px;
+    margin-left: 40px;
+}
+.year{
+    padding: 4px 22px;
+    background: rgba(216, 10, 10, 0.658);
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 15px 60px;
+    border-radius: 30px;
+    display: inline-block;
+}
+.college i{
+    color: red;
+}
+
+.skills{
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.skills h2{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+.skills p {
+    text-indent: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 30px;
+}
+.skills .skillset{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.skills .skillset .box .skill1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.skills .skillset .box .skill1 h3{
+    font-style: italic;
+}
+.skills .skillset .box .outerline{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(179, 172, 172, 0.795);
+    border-radius: 15px;
+}
+.skills .skillset .box .outerline .innerline{
+    height: 10px;
+    border-radius: 20px;
+    background-color: red;
+}
+.project {
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.project h2{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+.project .slidercontainer{
+    display: flex;
+    width: 100%;
+    margin-top: 10%;
+}
+.project .slidercontainer .fileupload{
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+}
+.project .slidercontainer .fileupload .cardslider{
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+    padding-right: 30px;
+}
+.project .slidercontainer .fileupload .cardslider .card{
+    background-color: sandybrown;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.project .slidercontainer .fileupload .cardslider .card p{
+    text-align: center;
+}
+.cardprev{
+    position: relative;
+    width: 50px;
+    margin-left: 40px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+.prevbutton{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: right;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.prevbutton:hover, .nextbutton :hover {
+    box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
+}
+.cardnext {
+    position: relative;
+    margin-left: -20px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+.nextbutton{
+    transition: 0.2s;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nextbutton img{
+    border-radius: 50%;
+}
+.project .webpages .card i{
+    color: black;
+}
+.project .webpages .card .webimg{
+    padding: 10px;
+    
+}
+.project .webpages .card .webimg img{
+    border-radius: 5px;
+}
+.contact{
+    padding: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.contact h2{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+.contact .devcontact{
+    padding: 20px;
+    display: flex;
+    margin-top: 20px;
+}
+.contact .devcontact .leftcontact{
+    padding: 10px;
+    width: 45%;
+    background: white;
+    border-radius: 10px;
+    margin-left: 20px;
+    box-shadow: 3.9px 7px 7px hsl(0deg 0% 0% / 0.38);
+}
+.contact .devcontact .leftcontact li{
+    padding: 10px;
+    text-align: justify;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact .devcontact .leftcontact li i{
+    font-size: 18px;
+    color: red;
+}
+.contact .devcontact .leftcontact li strong{
+    padding-left: 5px;
+    font-size: 18px;
+    font-style: italic;
+}
+.contact .devcontact .leftcontact li span{
+    font-weight: 500;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.contact .devcontact .leftcontact .locmap{
+    padding-top: 15px;
+    width: 60%;
+}
+.contact .devcontact .leftcontact .locmap iframe{
+    width: 100%;
+}
+.contact .devcontact .rightcontact{
+    background: white;
+    width: 55%;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    margin-left: 20px;
+    box-shadow: 3.9px 7px 7px hsl(0deg 0% 0% / 0.38);
+}
+.contact .devcontact .rightcontact form textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    background: rgba(243, 236, 236, 0.699);
+}
+.contact .devcontact .rightcontact form input{
+    background: rgba(243, 236, 236, 0.699);
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.contact .devcontact .rightcontact form .button{
+    background: rgba(202, 29, 64, 0.623);
+    color: whitesmoke;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.contact .devcontact .rightcontact form .button:hover{
+    background: crimson;
+}
+@media (max-width: 1200px){
+    .img1 , .img2 , .img3 , .img4 , .img5 , .img6{
+        width: 250px;
+    }
+}
+@media (max-width: 1100px){
+    .project .webpages .card{
+        width: 300px;
+    }
+    .socials a i{
+        font-size: 20px;
+        padding: 30px;
+    }
+}
+@media (max-width: 950px){
+    .checkbtn{
+        display: block;
+    }
+    .checkbtn img{
+        width: 40px;
+    }
+    .dp{
+        display: block;
+    }
+    .sidebar{
+        display: none;
+    }
+    ul{
+        position: fixed;
+        width: 50%;
+        height: 60vh;
+        background: rgba(243, 7, 7, 0.548);
+        top: 80px;
+        left: -50%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+    }
+    nav li a:hover , .active{
+        color: whitesmoke;
+        background: none;
+        transition: .5s;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .details{
+        gap: 20px;
+    }
+    .about .details .left li , .about .details .right li{
+        margin-left: 20px;
+    }
+    .project .webpages{
+        display: list-item;
+    }
+    .project .webpages .card{
+        margin-top: 10px;
+        margin-left: 20%;
+    }
+}
+@media (max-width: 850px){
+    .certificate{
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .img1 , .img2 , .img3 , .img4 , .img5 , .img6{
+        width: 200px;
+    }
+    .contact .devcontact{
+        display: list-item;
+    }
+    .contact .devcontact .leftcontact{
+        width: 80%;
+    }
+    .contact .devcontact .rightcontact{
+        margin-top: 20px;
+        width: 80%;
+    }
+}
+@media (max-width: 750px){
+    .details{
+        display: list-item;
+    }
+    .socials a i{
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+@media (max-width: 650px){
+    .img1 , .img2 , .img3 , .img4 , .img5 , .img6{
+        width: 150px;
+    }
+    .socials{
+        bottom: 15%;
+    }
+    .project .webpages .card{
+        margin-left: 15%;
+    }
+}
+@media (max-width: 500px){
+    .checkbtn{
+        margin-right: 10px;
+    }
+    .checkbtn img{
+        width: 30px;
+    }
+    .dp{
+        margin-right: 20px;
+    }
+    .dp img{
+        width: 30px;
+    }
+    .sidenav label{
+        font-size: 10px;
+    }
+    .sidenav label span{
+        font-size: 25px;
+    }
+    .profile img{
+        width: 80px;
+    }
+    .profile p{
+        font-size: 10px;
+    }
+    .work{
+        font-size: 13px;
+    }
+    .socials a i{
+        font-size: 15px;
+        padding: 13px;
+    }
+    .homecontent p{
+        font-size: 17px;
+        padding: 5px;
+    }
+    .about h3{
+        font-size: 20px;
+    }
+    .about p{
+        font-size: 12px;
+        text-indent: 50px;
+    }
+    .about h2{
+        font-size: 17px;
+    }
+    .details{
+        margin-top: 5px;
+    }
+    .about .details .left strong , .about .details .right strong ,
+    .about .details .left li span , .about .details .right li span ,
+    .details .left i , .details .right i{
+        font-size: 13px;
+    }
+    .about .details .left li , .about .details .right li{
+        margin-left: 15px;
+    }
+    .education h3{
+        font-size: 12px;
+        margin-left: 15px;
+    }
+    .year{
+        padding: 2px 16px;
+        font-size: 9px;
+        font-weight: 200;
+        margin: 9px 30px;
+        border-radius: 14px;
+    }
+    .certificate{
+        display: list-item;
+    }
+    .skills h2{
+        font-size: 18px;
+    }
+    .skills p{
+        font-size: 12px;
+    }
+    .skills .skillset .box .skill1 h3{
+        font-size: 15px;
+    }
+    .skills .skillset{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+    .project h2{
+        font-size: 20px;
+    }
+    .project .webpages{
+        padding: 15px;
+    }
+    .project .webpages .card{
+        margin-left: 5%;
+        width: 250px;
+    }
+    .project .webpages .card p{
+        font-size: 14px;
+    }
+    .project .slidercontainer{
+        width: 100%;
+        margin-top: 10%;
+    }
+    .project .slidercontainer .fileupload{
+        background-color: black;
+        width: 100%;
+        padding: 10px;
+    }
+    .cardprev{
+        padding-left: 10px;
+    }
+    .contact h2{
+        font-size: 20px;
+    }
+    .contact .devcontact .leftcontact li{
+        padding: 5px;
+    }
+    .contact .devcontact .leftcontact li i{
+        font-size: 14px;
+    }
+    .contact .devcontact .leftcontact li strong{
+        padding-left: 5px;
+        font-size: 14px;
+    }
+    .contact .devcontact .leftcontact li span{
+        font-weight: 500;
+        font-size: 12px;
+        padding-left: 5px;
+    }
+}
+@media (max-width: 400px){
+    .profile img{
+        width: 60px;
+    }
+    .socials{
+        bottom: 20%;
+    }
+    .project .webpages .card{
+        margin-left: 0;
+        width: 200px;
+    }
+    .contact .devcontact .rightcontact form input ,
+    .contact .devcontact .rightcontact form textarea{
+        padding: 15px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .contact .devcontact .leftcontact .email span{
+        font-size: 10px;
+    }
+}
+@media (max-width: 350px) {
+    nav label{
+        font-size: 10px;
+    }
+    nav label span{
+        font-size: 20px;
+    }
+    .contact .devcontact .leftcontact{
+        padding: 5px;
+    }
+    .contact .devcontact .leftcontact{
+        width: 85%;
+    }
+    .contact .devcontact .rightcontact form input ,
+    .contact .devcontact .rightcontact form textarea{
+        padding: 10px;
+        font-size: 8px;
+        font-weight: 500;
+    }
+}
