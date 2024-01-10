@@ -128,7 +128,7 @@ nav li a:hover , .active{
     margin-top: 15px;
 }
 .Home{
-    height: 90vh;
+    height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     justify-content: center;
